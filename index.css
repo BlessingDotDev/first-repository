@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+:root{
+  --box-size: 100px;
+  --hover-color: rgba(0, 0, 0, .2);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(59, 87, 111);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+
+}
+
+.container .cell {
+  height: var(--box-size);
+  width: var(--box-size);
+  border: 1px solid black;
+
+}
+
+.cell:first-child, .cell:nth-child(2), .cell:nth-child(3){
+ border-top: none;
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:last-child{
+  border-bottom: none;
+}
+
+.cell:hover{
+  background-color: var(--hover-color);
+  transition: all 300ms ease; 
+}
