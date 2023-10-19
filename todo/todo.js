@@ -14,7 +14,7 @@ function renderTodo() {
    let todoHtml = '';
 
 
-  todoList.map((todo, index)=>{
+  todoList.forEach((todo, index)=>{
     const {name, date} = todo;
     const html = `<p>${name}</p>
     <div>${date}</div>
